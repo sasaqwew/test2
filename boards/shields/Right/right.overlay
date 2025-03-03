@@ -1,0 +1,33 @@
+/ {
+    chosen {
+        zmk,scan-matrix = &kb_scan_right;
+    };
+
+    kb_scan_right: matrix {
+        compatible = "zmk,matrix-transform";
+        rows = <8>;
+        columns = <8>;
+
+        row-gpios = <
+            &gpio1 0 GPIO_ACTIVE_LOW,  // P1.00
+            &gpio1 1 GPIO_ACTIVE_LOW,  // P1.01
+            &gpio1 2 GPIO_ACTIVE_LOW,  // P1.02
+            &gpio1 3 GPIO_ACTIVE_LOW,  // P1.03
+            &gpio1 4 GPIO_ACTIVE_LOW,  // P1.04
+            &gpio1 5 GPIO_ACTIVE_LOW,  // P1.05
+            &gpio1 6 GPIO_ACTIVE_LOW,  // P1.06
+            &gpio1 7 GPIO_ACTIVE_LOW   // P1.07
+        >;
+
+        col-gpios = <
+            &gpio1 8 GPIO_ACTIVE_LOW,  // P1.08
+            &gpio1 9 GPIO_ACTIVE_LOW,  // P1.09
+            &gpio1 10 GPIO_ACTIVE_LOW, // P1.10
+            &gpio1 11 GPIO_ACTIVE_LOW, // P1.11
+            &gpio1 12 GPIO_ACTIVE_LOW, // P1.12
+            &gpio1 13 GPIO_ACTIVE_LOW, // P1.13
+            &gpio1 14 GPIO_ACTIVE_LOW, // P1.14
+            &gpio1 15 GPIO_ACTIVE_LOW  // P1.15
+        >;
+    };
+};
