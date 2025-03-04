@@ -23,11 +23,13 @@ jobs:
       - name: Set up Python environment
         run: |
           python3 -m venv zmk-env
+          echo "source $(pwd)/zmk-env/bin/activate" >> $GITHUB_ENV
           source zmk-env/bin/activate
           pip install west
 
       - name: Initialize and update West
         run: |
+          source zmk-env/bin/activate
           west init -l app/
           west update
           west zephyr-export
