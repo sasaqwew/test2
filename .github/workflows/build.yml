@@ -23,7 +23,7 @@ jobs:
       - name: Set up Python environment
         run: |
           python3 -m venv zmk-env
-          echo "source $(pwd)/zmk-env/bin/activate" >> $GITHUB_ENV
+          echo "$(pwd)/zmk-env/bin/activate" >> $GITHUB_PATH
           source zmk-env/bin/activate
           pip install west
 
