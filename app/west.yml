@@ -1,6 +1,14 @@
 manifest:
+  version: "0.7"
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+
   projects:
     - name: zmk
-      url: https://github.com/zmkfirmware/zmk.git
+      remote: zmkfirmware
       revision: main
       import: app
+
+  self:
+    path: app
